@@ -3,4 +3,5 @@ from Platform import views
 
 urlpatterns = [
     url(r'^index.html', views.index),
+    url(r'^interfacesum.html', views.interfaceSum),
 ]
