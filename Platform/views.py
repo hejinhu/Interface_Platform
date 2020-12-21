@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from Platform import models
 
 
 # Create your views here.
@@ -8,4 +9,5 @@ def index(request):
 
 def interfaceSum(request):
     """接口集合"""
-    return render(request, 'interfaceSum.html')
+    team = models.interface.objects.all()
+    return render(request, 'interfaceSum.html', {'team': team})
